@@ -78,3 +78,16 @@ export default App;
 
 // Even though useContext() can be seen as useful and more compact coding, using Props should still always be considered when coding in React and components should be still be
 // configurable via props
+
+// Rules of Hooks (aka useState/useEffect/useReducer/useContext)
+// 1. Only call React Hooks in REACT FUNCTIONS
+// 1a. React Component
+// 1b. Custom Hooks
+
+// 2. Only Call React Hooks at the Top Level
+// 2a. Don't call them in nested functions
+// 2b. Don't call them in any block statements
+
+// 3. useEffect(): ALWAYS add everything you refer to inside of useEffect() as a dependency
+// for example: in Login.js. The useEffect() used for the "setFormIsValid(emailIsValid && passwordIsValid)".
+// the state "emailIsValid" and "passwordIsValid" is included as a dependency in the ",[]" codeblock, so it's ",[emailIsValid,passwordIsValid]"
