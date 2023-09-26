@@ -74,3 +74,7 @@ export default App;
 // useContext() is NOT optimized for high frequency changes
 // For example, this example App is not a Flux-like state proppogating app. Meaning it's not seeing many changes in such a short period of time.
 // When building an App that will see many changes in a short period of time, useContext() would not be the optimal usage.
+// REDUX will be needed for a BIG App that requires something like useContext() but also has high frequency changes.
+
+// Even though useContext() can be seen as useful and more compact coding, using Props should still always be considered when coding in React and components should be still be
+// configurable via props
